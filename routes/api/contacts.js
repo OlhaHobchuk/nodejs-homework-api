@@ -8,7 +8,7 @@ const {
   deleteContact,
   updateContact,
   updateFavourite,
-} = require("../../controllers/contacts");
+} = require("../../controllers/contacts/contacts");
 
 const {
   validateBody,
