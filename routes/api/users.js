@@ -10,9 +10,15 @@ const {
   logout,
   updateSubscription,
   updateAvatar,
+  recendVerifyEmail,
+  verifyEmail,
 } = require("../../controllers/auth/auth");
 
 router.post("/register", validateBody(schemas.registerSchema), register);
+
+router.get("/verify/:verificationToken", verifyEmail);
+
+router.post("/verify", validateBody(schemas.verifySchema), recendVerifyEmail);
 
 router.post("/login", validateBody(schemas.loginSchema), login);
 
